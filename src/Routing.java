@@ -1,3 +1,5 @@
+import sun.rmi.transport.Endpoint;
+
 import java.util.*;
 
 public class Routing {
@@ -11,7 +13,29 @@ public class Routing {
      */
     public static ArrayList<Wire>
     findPaths(Board board, ArrayList<Endpoints> goals) {
-        return null;  // replace this line with your code
+        // Iterate through each goal
+        for (Endpoints goal : goals) {
+            int id = goal.id;
+            Coord start = goal.start;
+
+            // Queue (uses endpoints to store start, end, and aggregate dist
+            Queue<Endpoints> queue = new LinkedList<>();
+            // Dictionary for path and cost
+            Dictionary<Coord, Integer> paths = new Hashtable<>();
+
+            for (Coord neighbor : board.adj(start)) {
+                // Check if path to coord already found
+                if (paths.)
+
+                Endpoints edge = new Endpoints()
+                queue.offer()
+            }
+
+
+
+
+
+        }
     }
 
 }
