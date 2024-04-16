@@ -1,4 +1,3 @@
-import sun.rmi.transport.Endpoint;
 
 import java.util.*;
 
@@ -34,6 +33,7 @@ public class Routing {
                 }
                 board.removeWire(result.get(i));
 
+                // Move goal to end to prioritize other goals
                 maxResult=maxResult.size() < result.size() ? new ArrayList<>(result): maxResult;
                 result.remove(i);
                 local.add(local.remove(i));
